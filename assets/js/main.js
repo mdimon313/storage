@@ -75,7 +75,7 @@ form.addEventListener("submit", (e)=>{
     // Close popup form
     close();
     } else {
-        alert('enter valid value');
+        alert('Empty Not Allowed !');
     }
 
     // Reset form

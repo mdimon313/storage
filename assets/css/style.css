@@ -145,6 +145,10 @@ body::-webkit-scrollbar-thumb {
         font-size: 1rem;
     }
 
+    .box p {
+        height: 30vh;
+    }
+
     form {
         width: 100%;
         margin: 0 15px;
@@ -209,6 +213,10 @@ body::-webkit-scrollbar-thumb {
     /* background: rgb(182, 35, 35); */
     background: rgb(219, 35, 35);
     color: #fff;
+}
+
+.close:active {
+    background: rgb(219, 35, 35);
 }
 
 .form form h2 {
