@@ -1,3 +1,18 @@
+
+window.addEventListener('scroll',()=> {
+    const header = document.querySelector("#header");
+    const positionFixed = window.pageYOffset;
+    console.log(positionFixed)
+    if (positionFixed > 100) {
+        header.classList.add('fixed')
+        // header.style.zIndex= '999';
+    } 
+    if (positionFixed<99) {
+        header.classList.remove('fixed');
+    }
+    
+}, true)
+
 const form = document.querySelector("form"),
 showForm = document.querySelector("#add"),
 closeForm = document.querySelector(".closeForm");
@@ -109,7 +124,10 @@ const showContent = ()=> {
 
 
 
- window.onload= ()=> showContent();
+
+
+
+window.addEventListener("load", ()=> showContent())
 // showContent();
 showForm.addEventListener("click", show);
 closeForm.addEventListener("click", close);

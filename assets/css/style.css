@@ -6,7 +6,7 @@
 html,body {
     scroll-behavior: smooth;
     min-height: 100vh;
-    background:linear-gradient(to right,rgba(39, 49, 97, 0.26), rgba(53, 53, 53, 0.116));
+    background: #171C2A;
 }
 body::-webkit-scrollbar {
     width: 10px;
@@ -32,16 +32,26 @@ body::-webkit-scrollbar-thumb {
     grid-template-columns: repeat(4,1fr);
     grid-gap: 1.2rem;
 }
+.fixed {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    transition: ease-in-out;
+}
 
 #header {
-    background: rgb(39, 49, 97);
+    /* background-color: #45b14a; */
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid #45b14a;
     color: #fff;
     height: 60px;
     line-height: 60px;
     padding: 0 30px;
 }
 .header h1 {
-    font-size: 30px;
+    font-size: 32px;
     font-family: arial;
 }
 
@@ -55,7 +65,9 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: dodgerblue;
+    /* background: rgba(255, 255, 255, 0.3); */
+    border: 1px solid seagreen;
+    backdrop-filter: blur(5px);
     color: #fff;
     font-size: 2rem;
     user-select: none;
@@ -68,21 +80,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 .box {
-    border: 1px solid #333;
+    border: 1px solid #45B14A;
     padding: 10px;
     border-radius: 5px;
     position: relative;
+    background-color: #171C2A;
 }
 
 .box h2 {
     font-size: 20px;
     font-family: arial;
-    padding-bottom: .5rem;
+    padding-bottom: 0.8rem;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #45B14A;
     color: #333;
     letter-spacing: 1px;
     text-transform: capitalize;
+}
+
+.box h2,
+.box p {
+    color: #ffffff;
 }
 
 .box p {
@@ -138,7 +156,8 @@ body::-webkit-scrollbar-thumb {
     }
 	
 	#header .header h1 {
-		font-size: 22px;
+		font-size: 28px;
+        text-align: center;
 	}
 
     .box h2 {
@@ -182,26 +201,28 @@ body::-webkit-scrollbar-thumb {
 .form form {
     width: 30rem ;
     max-width: 30rem;
-    background: #fff;
+    color: #fff;
+    background: #171C2A;
     padding: 1rem;
     display: flex;
     flex-direction:column;
     -ms-flex-direction: column;
     border-radius: 5px;
     position: relative;
-    border: 1px solid rgb(160, 160, 160);
+    border: 1px solid #2b962b;
 }
 
 .close {
     position: absolute;
     top: 4px;
-    right: 4px;
+    right: 10px;
     width: 30px;
     height: 30px;
-    background: dodgerblue;
+    /* background: #1CB3BD; */
+    border: 1px solid #45B14A;
     display: grid;
     place-items: center;
-    color: #fff;
+    color: #45b14a;
     font-size: 1.5rem;
     border-radius: 50%;
     cursor: pointer;
@@ -212,6 +233,7 @@ body::-webkit-scrollbar-thumb {
 .close:hover {
     /* background: rgb(182, 35, 35); */
     background: rgb(219, 35, 35);
+    border: 1px solid rgb(219, 35, 35);
     color: #fff;
 }
 
@@ -230,11 +252,13 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
     padding: 8px 5px;
     margin-bottom: 1rem;
-    border: 1px solid rgb(196, 195, 195);
+    border: 1px solid #2b962b;
+    background-color: transparent;
     outline: none;
     border-radius: 5px;
     font-family: arial;
     font-size: 15px;
+    color: #fff;
 }
 
 :is(.form form input, .form form textarea):focus {
@@ -248,12 +272,14 @@ body::-webkit-scrollbar-thumb {
     padding: 8px 5px;
     overflow-y: scroll;
     margin-bottom: 1rem;
-    border: 1px solid rgb(196, 195, 195);
+    background-color: transparent;
+    border: 1px solid #2b962b;
     outline: none;
     border-radius: 5px;
     resize: none;
     font-family: arial;
     font-size: 15px;
+    color: #fff;
 }
 
 .form form textarea::-webkit-scrollbar {
@@ -264,7 +290,7 @@ body::-webkit-scrollbar-thumb {
 :is(.form form textarea,
 .form form input)::placeholder {
     font-size: 1rem;
-    color: rgb(78, 78, 78);
+    color: rgb(156, 156, 156);
     font-family: arial;
 }
 
@@ -274,7 +300,8 @@ button#save {
     font-size: 1rem;
     color: #fff;
     background: dodgerblue;
-    border: none;
+    border: 1px solid dodgerblue;
+    /* border: none; */
     border-radius: 5px;
     outline: none;
     cursor: pointer;
@@ -283,6 +310,8 @@ button#save {
     transition: all .3s ease;
 }
 button#save:hover {
-    background: rgb(13, 129, 245);
+    /* background: rgb(13, 129, 245); */
+    background-color: transparent;
+    border: 1px solid #45b14a;
 }
 
